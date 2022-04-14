@@ -1,0 +1,5 @@
+{
+    "require": {
+        "dusterio/link-preview": "^1.2"
+    }
+}

@@ -1,0 +1,6 @@
+plugin:
+    name: 'publipresse.twigextensions::lang.plugin.name'
+    description: 'publipresse.twigextensions::lang.plugin.description'
+    author: Publipresse
+    icon: oc-icon-ils
+    homepage: ''
