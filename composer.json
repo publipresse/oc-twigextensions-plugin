@@ -1,5 +1,9 @@
 {
+    "name": "publipresse/twigextensions-plugin",
+    "type": "october-plugin",
+    "description": "Add some useful Twig Extensions to October CMS",
     "require": {
+        "composer/installers": "~1.0",
         "dusterio/link-preview": "^1.2"
     }
 }
