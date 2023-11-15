@@ -29,17 +29,14 @@ class Plugin extends PluginBase
     }
 
     public function imageWidth($url) {
-        $data = getimagesize($url);
-        return $data[0];
+        return !empty($url)? getimagesize($url)[0] : null;
     }
-
+    
     public function imageHeight($url) {
-        $data = getimagesize($url);
-        return $data[1];
+        return !empty($url)? getimagesize($url)[1] : null;
     }
-
+    
     public function imageDimensions($url) {
-        $data = getimagesize($url);
-        return $data[3];
+        return !empty($url)? getimagesize($url)[3] : null;
     }
 }
