@@ -2,7 +2,7 @@
 
 use System\Classes\PluginBase;
 
-use Dusterio\LinkPreview\Client as LinkPreview;
+use Hazaveh\LinkPreview\Client as LinkPreview;
 
 class Plugin extends PluginBase
 {
@@ -19,12 +19,8 @@ class Plugin extends PluginBase
     }
 
     public function linkPreview($url, $parser = null) {
-        $client = new LinkPreview($url);
-        if(!$parser) {
-            $preview = $client->getPreviews();
-        } else {
-            $preview = $client->getPreview($parser)->toArray();
-        }
+        $client = new LinkPreview();
+        $preview = $client->parse($url);
         return $preview;
     }
 

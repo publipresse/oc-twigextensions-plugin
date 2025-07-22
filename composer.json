@@ -4,6 +4,6 @@
     "description": "Add some useful Twig Extensions to October CMS",
     "require": {
         "composer/installers": "~1.0",
-        "dusterio/link-preview": "^1.2"
+        "hazaveh/php-link-preview": "^1.0"
     }
 }
