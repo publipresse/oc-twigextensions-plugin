@@ -12,7 +12,7 @@ class Plugin extends PluginBase
             'filters' => [
                 'linkpreview' => [$this, 'linkPreview'],
                 'imagewidth' => [$this, 'imageWidth'],
-                'imageweight' => [$this, 'imageHeight'],
+                'imageheight' => [$this, 'imageHeight'],
                 'imagedimensions' => [$this, 'imageDimensions'],
             ],
         ];
