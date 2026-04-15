@@ -24,15 +24,22 @@ class Plugin extends PluginBase
         return $preview;
     }
 
-    public function imageWidth($url) {
-        return !empty($url)? @getimagesize($url)[0] : null;
+    protected function imageSize($url): array
+    {
+        if (empty($url)) return [];
+        $path = public_path(parse_url($url, PHP_URL_PATH));
+        return @getimagesize($path) ?: [];
+    }
+
+    public function imageWidth($url) { 
+        return $this->imageSize($url)[0] ?? null; 
+    }
+
+    public function imageHeight($url) { 
+        return $this->imageSize($url)[1] ?? null; 
     }
     
-    public function imageHeight($url) {
-        return !empty($url)? @getimagesize($url)[1] : null;
-    }
-    
-    public function imageDimensions($url) {
-        return !empty($url)? @getimagesize($url)[3] : null;
+    public function imageDimensions($url) { 
+        return $this->imageSize($url)[3] ?? null; 
     }
 }
